@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Konversi Satuan</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <!-- Konversi Suhu -->
+    <div class="card">
+      <h2>Konversi Suhu</h2>
+      <form action="/" method="post">
+        <input type="hidden" name="category" value="suhu" />
+        <input
+          type="number"
+          step="any"
+          name="value"
+          placeholder="Masukkan angka"
+          required
+        />
+        <select name="from_unit">
+          <option value="celsius">Celsius</option>
+          <option value="fahrenheit">Fahrenheit</option>
+          <option value="kelvin">Kelvin</option>
+        </select>
+        <span> ➝ </span>
+        <select name="to_unit">
+          <option value="celsius">Celsius</option>
+          <option value="fahrenheit">Fahrenheit</option>
+          <option value="kelvin">Kelvin</option>
+        </select>
+        <button type="submit">Konversi</button>
+      </form>
+      {% if hasil_suhu is not none %}
+      <h3>Hasil: {{ hasil_suhu }}</h3>
+      {% endif %}
+    </div>
+
+    <!-- Konversi Jarak -->
+    <div class="card">
+      <h2>Konversi Jarak</h2>
+      <form action="/" method="post">
+        <input type="hidden" name="category" value="jarak" />
+        <input
+          type="number"
+          step="any"
+          name="value"
+          placeholder="Masukkan angka"
+          required
+        />
+        <select name="from_unit">
+          <option value="meter">Meter</option>
+          <option value="kilometer">Kilometer</option>
+          <option value="mil">Mil</option>
+        </select>
+        <span> ➝ </span>
+        <select name="to_unit">
+          <option value="meter">Meter</option>
+          <option value="kilometer">Kilometer</option>
+          <option value="mil">Mil</option>
+        </select>
+        <button type="submit">Konversi</button>
+      </form>
+      {% if hasil_jarak is not none %}
+      <h3>Hasil: {{ hasil_jarak }}</h3>
+      {% endif %}
+    </div>
+
+    <!-- Konversi Berat -->
+    <div class="card">
+      <h2>Konversi Berat</h2>
+      <form action="/" method="post">
+        <input type="hidden" name="category" value="berat" />
+        <input
+          type="number"
+          step="any"
+          name="value"
+          placeholder="Masukkan angka"
+          required
+        />
+        <select name="from_unit">
+          <option value="kilogram">Kilogram</option>
+          <option value="gram">Gram</option>
+          <option value="pon">Pon</option>
+        </select>
+        <span> ➝ </span>
+        <select name="to_unit">
+          <option value="kilogram">Kilogram</option>
+          <option value="gram">Gram</option>
+          <option value="pon">Pon</option>
+        </select>
+        <button type="submit">Konversi</button>
+      </form>
+      {% if hasil_berat is not none %}
+      <h3>Hasil: {{ hasil_berat }}</h3>
+      {% endif %}
+    </div>
+  </body>
+</html>

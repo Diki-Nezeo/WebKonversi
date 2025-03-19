@@ -1,0 +1,55 @@
+body {
+  background-color: #021c1e;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 50px;
+}
+
+h2 {
+  text-align: left;
+  color: #004445;
+}
+
+form {
+  margin-top: 20px;
+}
+select {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  background: linear-gradient(to right, #4caf50, #2e7031);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+select:hover {
+  background: linear-gradient(to right, #45a049, #3a823e);
+}
+
+input,
+select,
+button {
+  padding: 10px;
+  margin: 5px;
+}
+
+button {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  background: linear-gradient(to right, #4caf50, #2e7031);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6); /* this adds the "card" effect */
+  text-align: center;
+  background-color: #f7f7f7;
+  border-radius: 25px;
+  margin-top: 100px;
+  padding: 50px;
+}
